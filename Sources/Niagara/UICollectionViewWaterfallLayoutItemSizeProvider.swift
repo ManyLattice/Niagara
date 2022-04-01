@@ -4,6 +4,6 @@
  * MIT license, see LICENSE file for details
  */
 
-import UIKit
+import Cocoa
 
 public typealias UICollectionViewWaterfallLayoutItemSizeProvider = (IndexPath) -> CGSize

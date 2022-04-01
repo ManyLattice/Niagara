@@ -4,7 +4,7 @@
  * MIT license, see LICENSE file for details
  */
 
-import UIKit
+import Cocoa
 
 class LayoutItemProvider {
     
@@ -71,4 +71,5 @@ class LayoutItemProvider {
             .min(by: { $0.element < $1.element })?
             .offset ?? 0
     }
+    
 }

@@ -4,30 +4,28 @@
  * MIT license, see LICENSE file for details
  */
 
-import UIKit
+import Cocoa
 
-public extension UICollectionViewCompositionalLayout {
+public extension NSCollectionViewCompositionalLayout {
     
     static func waterfall(
         columnCount: Int = 2,
         spacing: CGFloat = 8,
-        contentInsetsReference: UIContentInsetsReference = .automatic,
         itemSizeProvider: @escaping UICollectionViewWaterfallLayoutItemSizeProvider
-    ) -> UICollectionViewCompositionalLayout {
+    ) -> NSCollectionViewCompositionalLayout {
         let configuration = UICollectionLayoutWaterfallConfiguration(
             columnCount: columnCount,
             spacing: spacing,
-            contentInsetsReference: contentInsetsReference,
             itemSizeProvider: itemSizeProvider
         )
         return waterfall(configuration: configuration)
     }
     
-    static func waterfall(configuration: UICollectionLayoutWaterfallConfiguration) -> UICollectionViewCompositionalLayout {
+    static func waterfall(configuration: UICollectionLayoutWaterfallConfiguration) -> NSCollectionViewCompositionalLayout {
         
         var numberOfItems: (Int) -> Int = { _ in 0 }
         
-        let layout = UICollectionViewCompositionalLayout { section, environment in
+        let layout = NSCollectionViewCompositionalLayout { section, environment in
             
             let groupLayoutSize = NSCollectionLayoutSize(
                 widthDimension: .fractionalWidth(1),
@@ -46,7 +44,6 @@ public extension UICollectionViewCompositionalLayout {
             }
             
             let section = NSCollectionLayoutSection(group: group)
-            section.contentInsetsReference = configuration.contentInsetsReference
             return section
         }
         
