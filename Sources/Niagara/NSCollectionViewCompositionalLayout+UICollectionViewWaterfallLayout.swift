@@ -11,9 +11,9 @@ public extension NSCollectionViewCompositionalLayout {
     static func waterfall(
         columnCount: Int = 2,
         spacing: CGFloat = 8,
-        itemSizeProvider: @escaping UICollectionViewWaterfallLayoutItemSizeProvider
+        itemSizeProvider: @escaping NSCollectionViewWaterfallLayoutItemSizeProvider
     ) -> NSCollectionViewCompositionalLayout {
-        let configuration = UICollectionLayoutWaterfallConfiguration(
+        let configuration = NSCollectionLayoutWaterfallConfiguration(
             columnCount: columnCount,
             spacing: spacing,
             itemSizeProvider: itemSizeProvider
@@ -21,7 +21,7 @@ public extension NSCollectionViewCompositionalLayout {
         return waterfall(configuration: configuration)
     }
     
-    static func waterfall(configuration: UICollectionLayoutWaterfallConfiguration) -> NSCollectionViewCompositionalLayout {
+    static func waterfall(configuration: NSCollectionLayoutWaterfallConfiguration) -> NSCollectionViewCompositionalLayout {
         
         var numberOfItems: (Int) -> Int = { _ in 0 }
         

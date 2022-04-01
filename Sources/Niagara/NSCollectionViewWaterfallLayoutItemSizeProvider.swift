@@ -6,4 +6,4 @@
 
 import Cocoa
 
-public typealias UICollectionViewWaterfallLayoutItemSizeProvider = (IndexPath) -> CGSize
+public typealias NSCollectionViewWaterfallLayoutItemSizeProvider = (IndexPath) -> NSSize

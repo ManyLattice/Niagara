@@ -6,18 +6,18 @@
 
 import Cocoa
 
-public struct UICollectionLayoutWaterfallConfiguration {
+public struct NSCollectionLayoutWaterfallConfiguration {
     
     public var columnCount: Int
     
     public var spacing: CGFloat
     
-    public var itemSizeProvider: UICollectionViewWaterfallLayoutItemSizeProvider
+    public var itemSizeProvider: NSCollectionViewWaterfallLayoutItemSizeProvider
         
     public init(
         columnCount: Int = 2,
         spacing: CGFloat = 8,
-        itemSizeProvider: @escaping UICollectionViewWaterfallLayoutItemSizeProvider
+        itemSizeProvider: @escaping NSCollectionViewWaterfallLayoutItemSizeProvider
     ) {
         self.columnCount = columnCount
         self.spacing = spacing

@@ -12,14 +12,14 @@ class LayoutItemProvider {
     
     private let columnCount: CGFloat
     
-    private let itemSizeProvider: UICollectionViewWaterfallLayoutItemSizeProvider
+    private let itemSizeProvider: NSCollectionViewWaterfallLayoutItemSizeProvider
     
     private let spacing: CGFloat
     
     private let contentSize: CGSize
     
     init(
-        configuration: UICollectionLayoutWaterfallConfiguration,
+        configuration: NSCollectionLayoutWaterfallConfiguration,
         environment: NSCollectionLayoutEnvironment
     ) {
         self.columnHeights = [CGFloat](repeating: 0, count: configuration.columnCount)
