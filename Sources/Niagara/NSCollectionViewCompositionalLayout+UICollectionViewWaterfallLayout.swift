@@ -29,7 +29,7 @@ public extension NSCollectionViewCompositionalLayout {
             
             let groupLayoutSize = NSCollectionLayoutSize(
                 widthDimension: .fractionalWidth(1),
-                heightDimension: .estimated(environment.container.effectiveContentSize.height)
+                heightDimension: .absolute(environment.container.effectiveContentSize.height)
             )
             
             let group = NSCollectionLayoutGroup.custom(layoutSize: groupLayoutSize) { environment in
